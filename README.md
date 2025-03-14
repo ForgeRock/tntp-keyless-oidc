@@ -1,4 +1,4 @@
-# Forgerock Identity Cloud
+# Keyless OIDC 
 
 ## Overview
 This guide provides a step-by-step process to enable passwordless biometric authentication on Forgerock Identity Cloud using Keyless. Forgerock and Keyless have partnered to deliver a true passwordless authentication experience for both workforce and consumer applications.
@@ -23,11 +23,13 @@ Fill in the following details:
 | Auth ID Key | OIDC claim that identifies the user | sub |
 | Client ID | OIDC Client ID (Provided by Keyless) | - |
 | Client Secret | OIDC Client Secret (Provided by Keyless) | - |
-| Well Known Endpoint | OIDC discovery URL (Provided by Keyless) | `https://<my-keyless-tenant-fqdn>/.well-known/openid-configuration` |
+| Authentication Endpoint URL | OAuth authentication endpoint URL (Provided by Keyless) | - |
+| Access Token Endpoint URL | OAuth access token endpoint URL (Provided by Keyless) | - |
+| Well Known Endpoint | Well Known endpoint URL (Provided by Keyless) | - |
 | Issuer | OIDC Issuer URL (Provided by Keyless) | `https://<my-keyless-tenant-fqdn>` |
 | Client Authentication Method | Authentication method for OIDC Client | CLIENT_SECRET_POST |
 | PKCE Method | OIDC PKCE configuration | S256 |
-| Response Mode | OIDC Response mode | form_post |
+| Response Mode | OIDC Response mode | DEFAULT |
 | Oauth Scopes | OIDC/OAuth scope parameter | openid profile email |
 | Scope Delimiter | Scope delimiter | `<single-space-character>` |
 | OIDC Endpoints | Authorization, token, userinfo, JWKS endpoints (provided by Keyless) | `https://<my-keyless-tenant>/connect/authorize` |
